@@ -427,23 +427,20 @@ const Home = () => {
                       Hope you enjoy it!
                     </p>
                     {/* eslint-disable-next-line react/jsx-no-target-blank */ }
-                    <a
-                      className="btn btn-light btn-xl mr-2 mb-2"
-                      href='/user/login'
-                      target="_blank"
-                    >
+                    <Navlink to="/user/login" className="btn btn-light btn-xl mr-2 mb-2">
                       VIEW NOW <i className="simple-icon-arrow-right" />
-                    </a>
+                    </Navlink>
                   </div>
                 </div>
                 <div className="col-12 col-xl-7 offset-xl-1 col-lg-7 col-md-6  d-none d-md-block">
                   {/* eslint-disable-next-line react/jsx-no-target-blank */ }
-                  <a href={ adminRoot } target="_blank">
+                  <Navlink to={ adminRoot }>
+
                     <img
                       alt="hero"
                       src="/assets/img/landing-page/home-hero.png"
                     />
-                  </a>
+                  </Navlink>
                 </div>
               </div>
 

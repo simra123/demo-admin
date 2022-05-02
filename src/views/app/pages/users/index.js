@@ -18,7 +18,7 @@ const Categortlist = ({ match }) => {
     const [modalEdit, setModalEdit] = useState(false);
     const [loading, setLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
-    const [totalPages, setTotalPages] = useState(900)
+    const [totalPages, setTotalPages] = useState(1)
     const [currData, setAllCurrData] = useState([])
     const dataPerPage = 30
 
