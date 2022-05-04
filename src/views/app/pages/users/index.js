@@ -53,11 +53,7 @@ const Categortlist = ({ match }) => {
             })
             .catch((err) => console.log(err))
 
-    }, [modalDelete, modalEdit, modalPost])
-
-
-
-    console.log(allUsers.vendors)
+    }, [modalDelete, modalEdit, modalPost, currentPage])
 
     // change pages onclick 
     const Paginate = (pageNumber) => { setCurrentPage(pageNumber.selected + 1) }
@@ -189,7 +185,7 @@ const Categortlist = ({ match }) => {
                             </Table>
 
                             {
-                                totalPages > dataPerPage ? <ReactPaginate
+                                totalPages > 1 ? <ReactPaginate
                                     previousLabel={ <i className="simple-icon-arrow-left" /> }
                                     nextLabel={ <i className="simple-icon-arrow-right" /> }
                                     breakLabel="...."

@@ -5,7 +5,7 @@ export const BaseURL = 'https://massi-bucket.s3.amazonaws.com/'
 
 // Connection strings
 // const connectionString = 'http://localhost:5000/api/v2'
-const connectionString = 'https://event-massi.herokuapp.com/api/v2'
+const connectionString = 'http://ec2-3-95-252-129.compute-1.amazonaws.com:5000/api/v2'
 
 // const GetHeader = () => {
 //     return {
