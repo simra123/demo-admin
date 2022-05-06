@@ -28,9 +28,7 @@ const ViewApp = React.lazy(() =>
 const ViewUser = React.lazy(() =>
   import(/* webpackChunkName: "views-user" */ './views/user')
 );
-const ViewError = React.lazy(() =>
-  import(/* webpackChunkName: "views-error" */ './views/error')
-);
+
 const ViewUnauthorized = React.lazy(() =>
   import(/* webpackChunkName: "views-error" */ './views/unauthorized')
 );
@@ -66,28 +64,24 @@ const App = ({ locale }) => {
                   roles={ [UserRole.Admin, UserRole.Editor] }
                 />
                 <Route
-                  path="/user"
+                  path="/"
                   render={ (props) => <ViewUser { ...props } /> }
                 />
-                <Route
-                  path="/error"
-                  exact
-                  render={ (props) => <ViewError { ...props } /> }
-                />
+
                 <Route
                   path="/unauthorized"
                   exact
                   render={ (props) => <ViewUnauthorized { ...props } /> }
                 />
                 <Route
-                  path="/"
+                  path="/home"
                   exact
                   render={ (props) => <ViewHome { ...props } /> }
                 />
                 {/*
                 <Redirect exact from="/" to={adminRoot} />
                 */}
-                <Redirect to="/error" />
+                <Redirect to="/register" />
               </Switch>
             </Router>
           </Suspense>

@@ -10,15 +10,13 @@ const Error = () => {
     document.body.classList.add('background');
     document.body.classList.add('no-footer');
 
-    return () => {
-      document.body.classList.remove('background');
-      document.body.classList.remove('no-footer');
-    };
+
   }, []);
 
   return (
     <>
-      <div className="fixed-background" />
+      <div className="fixed-background background" />
+      askjeufau
       <main>
         <div className="container">
           <Row className="h-100">
@@ -40,7 +38,7 @@ const Error = () => {
                   </p>
                   <p className="display-1 font-weight-bold mb-5">404</p>
                   <NavLink
-                    to={adminRoot}
+                    to={ adminRoot }
                     className="btn btn-primary btn-shadow btn-lg"
                   >
                     <IntlMessages id="pages.go-back-home" />
